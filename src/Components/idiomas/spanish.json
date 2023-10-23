@@ -1,0 +1,12 @@
+{
+  "navbar": {
+      "arrays": "MATRICES",
+      "companies": "EMPRESAS",
+      "floors": "PLANTAS"
+  },
+  "greeting": {
+      "hello": "hola",
+      "greetingSubTitle":"Te damos la bienvenida al software de Matriz Profesional"
+  }
+  
+}
