@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import TraductorDropdown from './TraductorDropdown';
+import { globalJSONContext } from '../context/globalJsonDataContext';
 
 function NavBar() {
+  const {globalJSON} = useContext(globalJSONContext)
+
   return (
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light m-2">
@@ -14,13 +17,13 @@ function NavBar() {
          <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul className="navbar-nav  fw-lighter ml-auto">
             <li className="nav-item active">
-              <a className="nav-link text-black" href="/matrices">MATRICES</a>
+              <a className="nav-link text-black" href="/matrices">{globalJSON.navbar?.arrays}</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link text-black" href="/empresas">EMPRESAS</a>
+              <a className="nav-link text-black" href="/empresas">{globalJSON.navbar?.companies}</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link text-black" href="/plantas">PLANTAS</a>
+              <a className="nav-link text-black" href="/plantas">{globalJSON.navbar?.floors}</a>
             </li>
             <li className="nav-item">
               <a className="nav-link text-black" href="#">ICON</a>

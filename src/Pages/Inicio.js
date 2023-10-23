@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom'; // Importa Link
 import Navbar from '../Components/Navbar'
 import './inicio.css'; // Importa tu archivo CSS
 import '../main.scss'
+import { globalJSONContext } from '../context/globalJsonDataContext';
 
 const Inicio = () => {
+const {globalJSON} = useContext(globalJSONContext)
+
   return (
     <div>
       <Navbar />
@@ -13,8 +16,8 @@ const Inicio = () => {
         <div className="container text-container">
           <div className="row">
             <div className="col">
-              <h2 className="title">¡Hola usuario!</h2>
-              <p className="lead text-white mb-0">Te damos la bienvenida al software de Matriz Profesional</p>
+              <h2 className="title">{globalJSON.greeting?.hello} usuario!</h2>
+              <p className="lead text-white mb-0">{globalJSON.greeting?.greetingSubTitle}</p>
             </div>
           </div>
         </div>
