@@ -22,7 +22,6 @@ body {
   -o-transition: all 0.2s ease;
 }
 
-
 .bg-primary-light {
   background-color: $primary-light;
 }
@@ -45,10 +44,12 @@ body {
 .dropdown-item {
   color: $dark-light;
 }
+
 .language .dropdown-item img {
   width: 18px;
   height: 18px;
 }
+
 .language-active img {
   width: 26px;
   height: 26px;
@@ -93,9 +94,10 @@ body {
 .app-card {
   max-width: 1102px;
   min-height: 331px;
-  padding: 3rem;
+  padding: 1rem;
   display: grid;
 }
+
 .app-card-body {
   max-width: 100%!important;
   min-height: 100%!important;
@@ -333,6 +335,9 @@ padding: 3rem;
   transition-duration: 0.4s;
   transform: scale(0);
 }
+
+
+
 .btn-group-checkbox-item [type="checkbox"] {
   display: none;
 }
@@ -449,4 +454,8 @@ padding: 3rem;
   .app-card {
     padding: 2rem;
   }
+}
+
+.mi-boton.btn:focus {
+  outline: none !important;
 }
